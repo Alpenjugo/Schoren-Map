@@ -9,7 +9,7 @@
 <style>
 @font-face{font-family:"Bricolage";src:url(data:font/woff2;base64,/*FONT*/) format("woff2");font-weight:200 800;font-display:swap}
 :root{
-  --map:#f2ece3; --house:#e0d3c2; --house-none:#e9e0d4; --edge:#bfa98f;
+  --map:#e6dccd; --area:#f6f0e7; --house:#e0d3c2; --house-none:#e9e0d4; --edge:#bfa98f;
   --street:#fffdf9; --street-edge:#dccdb9; --path:#b39f86;
   --ink:#3b2a1e; --muted:#76624f; --line:#eadfcf; --panel:#fffdf9;
   --brown:#4a3324;
@@ -304,7 +304,7 @@ const isAdmin = () => !!db.session;
 const isOn = id => part.has(id);
 
 /* ---------- Karte ---------- */
-const map = L.map('map', {zoomControl: false, maxZoom: 20, zoomSnap: 0.25, rotate: true, bearing: 0,
+const map = L.map('map', {zoomControl: false, maxZoom: 20, zoomSnap: 0, zoomDelta: 0.5, bounceAtZoomLimits: false, rotate: true, bearing: 0,
   rotateControl: false, touchRotate: false, shiftKeyRotate: false, pitchDrag: false, attributionControl: true});
 map.attributionControl.setPrefix(false);
 L.control.zoom({position: 'topright'}).addTo(map);
@@ -362,7 +362,10 @@ if (embedded) {
   new FullBtn().addTo(map);
 }
 
+map.createPane('flaeche', map.getPane('rotatePane')).style.zIndex = 330;
 map.createPane('strassen', map.getPane('rotatePane')).style.zIndex = 340;
+/* Das Quartier als helle Fläche, die Umgebung tritt zurück */
+L.polygon(GRENZE, {pane: 'flaeche', stroke: true, color: '#d9cbb7', weight: 1, fillColor: '#f6f0e7', fillOpacity: 1, interactive: false, smoothFactor: 1}).addTo(map);
 map.createPane('gebaeude', map.getPane('rotatePane')).style.zIndex = 350;
 map.createPane('beschriftung', map.getPane('norotatePane')).style.zIndex = 380;
 map.getPane('beschriftung').style.pointerEvents = 'none';
@@ -643,10 +646,12 @@ function fitQuartier() {
   const mobile = window.innerWidth <= 760;
   const padL = 0, padB = 0, padT = mobile ? 64 : 72;
   const w = Math.max(...xs) - Math.min(...xs), h = Math.max(...ys) - Math.min(...ys);
-  const scale = Math.min((size.x - (mobile ? 24 : 120)) / w, (size.y - padT - 40) / h);
+  const scale = Math.min((size.x - (mobile ? 16 : 80)) / w, (size.y - padT - 24) / h);
   const z = Math.min(map.getZoom() + Math.log2(scale), 19);
   const mid = map.containerPointToLatLng(L.point((Math.max(...xs) + Math.min(...xs)) / 2, (Math.max(...ys) + Math.min(...ys)) / 2));
-  map.setView(mid, Math.floor(z * 4) / 4, {animate: false});
+  const fz = Math.floor(z * 4) / 4;
+  map.setMinZoom(fz - 0.75);
+  map.setView(mid, fz, {animate: false});
   map.panBy([0, -padT / 2], {animate: false});
 }
 
