@@ -12,7 +12,7 @@ Interaktive Karte für den Wichtelweg des Freizeitclubs Schoren (St. Gallen): Be
 | `jimdo-einbettung.html` | Code-Schnipsel für die Jimdo-Seite. |
 | `src/` | Quelle der Karte und Daten. Daraus baut `npm install && npm run build` die Datei `public/index.html`. |
 
-Tipp: Öffne `public/index.html` vorher einmal per Doppelklick. Ohne Datenbank läuft die Karte im Demo-Modus, und du kannst die Verwaltung ausprobieren («Verwaltung», beliebige E-Mail und beliebiges Passwort). Die Demo-Daten bleiben nur in deinem Browser.
+Tipp: Öffne `public/index.html` vorher einmal per Doppelklick. Ohne Datenbank läuft die Karte im Demo-Modus, und du kannst die Verwaltung ausprobieren (Menü oben links → «Anmelden (Organisation)», beliebige E-Mail und beliebiges Passwort). Die Demo-Daten bleiben nur in deinem Browser.
 
 ---
 
@@ -45,6 +45,8 @@ Tipp: Öffne `public/index.html` vorher einmal per Doppelklick. Ohne Datenbank l
    };
    ```
 
+   Die Zeile `zeitraum` steuert den Text unter dem Titel (z. B. «1. bis 24. Dezember, täglich ab 17 Uhr»). Du kannst sie jederzeit gleich ändern.
+
    Dieser Schlüssel ist öffentlich und darf in der Karte stehen. **Niemals** den «secret» oder «service_role» Key eintragen.
 3. **Commit changes** klicken. Alternativ schickst du mir die beiden Werte, und ich trage sie ein.
 
@@ -58,7 +60,7 @@ Tipp: Öffne `public/index.html` vorher einmal per Doppelklick. Ohne Datenbank l
    - **Build output directory:** `public`
 4. **Save and Deploy**. Die Karte ist danach unter `<projektname>.pages.dev` erreichbar.
 5. Prüfen:
-   - Über «Verwaltung» anmelden, ein Haus antippen und **Aufnehmen**.
+   - Menü oben links öffnen, «Anmelden (Organisation)», ein Haus antippen und **Hinzufügen**.
    - In einem anderen Browser kontrollieren, dass es rot erscheint.
 
 **Spätere Änderungen an der Karte:** Jede Änderung im Branch `main` wird automatisch veröffentlicht, nach etwa einer Minute ist sie online. Eine fehlerhafte Version lässt sich bei Cloudflare unter **Deployments** mit **Rollback** zurücknehmen.
