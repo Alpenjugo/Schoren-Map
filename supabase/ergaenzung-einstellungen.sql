@@ -1,4 +1,4 @@
--- Wichtelweg Schoren: Ergänzung «Einstellungen» (Text unter dem Titel)
+-- Wichtelweg Schoren: Ergänzung «Einstellungen» (Titel und Text unter dem Titel)
 -- Einmal ausführen in Supabase: SQL Editor → New query → alles einfügen → Run.
 -- Kann gefahrlos mehrmals ausgeführt werden. Ist bereits in einrichtung.sql enthalten.
 
@@ -23,9 +23,9 @@ create policy "Alle duerfen Einstellungen lesen" on public.einstellungen
   for select to anon, authenticated using (true);
 -- Nur bekannte Einstellungen sind erlaubt
 create policy "Angemeldete duerfen Einstellungen anlegen" on public.einstellungen
-  for insert to authenticated with check (schluessel in ('zeitraum'));
+  for insert to authenticated with check (schluessel in ('zeitraum', 'titel'));
 create policy "Angemeldete duerfen Einstellungen aendern" on public.einstellungen
-  for update to authenticated using (true) with check (schluessel in ('zeitraum'));
+  for update to authenticated using (true) with check (schluessel in ('zeitraum', 'titel'));
 
 create or replace function public.einstellungen_geaendert()
 returns trigger language plpgsql set search_path = '' as $$
@@ -41,5 +41,5 @@ create trigger einstellungen_geaendert
   for each row execute function public.einstellungen_geaendert();
 
 insert into public.einstellungen (schluessel, wert)
-values ('zeitraum', '1. bis 24. Dezember, täglich ab 17 Uhr')
+values ('zeitraum', '1. bis 24. Dezember, täglich ab 17 Uhr'), ('titel', 'Wichtelweg')
 on conflict (schluessel) do nothing;

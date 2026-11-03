@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wichtelweg Schoren</title>
+<title>Wichtelweg</title>
 <meta name="robots" content="noindex">
 <style>/* required styles */
 
@@ -692,6 +692,7 @@ button,input{font:inherit;color:inherit}
 .burger{width:36px;height:36px;border-radius:50%;background:var(--brown);color:#fffdf9;display:grid;place-items:center;flex:none}
 .pill b{display:block;font-size:17px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
 .pill small{display:block;font-size:13px;color:var(--muted);line-height:1.2}
+.pill small:empty{display:none}
 .pill.edit small{color:var(--red-dark);font-weight:700}
 .panel{position:fixed;z-index:1002;left:16px;top:16px;bottom:16px;width:340px;background:var(--panel);
   border-radius:18px;box-shadow:0 10px 40px rgba(74,51,36,.2),0 1px 3px rgba(74,51,36,.08);display:flex;flex-direction:column;overflow:hidden;
@@ -700,11 +701,11 @@ button,input{font:inherit;color:inherit}
 .close{position:absolute;right:12px;top:12px;width:36px;height:36px;border:0;border-radius:50%;background:#f3ebe0;color:var(--brown);cursor:pointer;font-size:18px;line-height:1}
 .close:hover{background:#eadfcf}
 .brand .when{margin:6px 0 0;color:var(--brown);font-weight:650}
-.brand .when:empty{display:none}
+.brand .when:empty,.brand p:empty{display:none}
 .when-edit{margin-top:10px}
 .when-edit label{display:block;font-size:13px;font-weight:650;color:var(--muted);margin-bottom:4px}
 .when-edit .row{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
-.when-edit input{flex:1 1 100%;min-width:0;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:#fff}
+.when-edit input{width:100%;flex:1 1 100%;min-width:0;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:#fff}
 .when-edit small{display:block;font-size:12.5px;color:var(--muted);min-height:1em;margin-top:3px}
 .panel-scroll{overflow-y:auto;padding:24px 22px 16px;display:flex;flex-direction:column;gap:20px;flex:1}
 .brand h1{font-size:40px;line-height:1;font-weight:800;letter-spacing:-.035em;margin:0;color:var(--brown);padding-right:40px}
@@ -832,21 +833,23 @@ dialog .row{display:flex;justify-content:flex-end;gap:8px}
 
 <button class="pill" id="pill" aria-controls="panel" aria-expanded="false">
   <span class="burger" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
-  <span><b>Wichtelweg</b><small id="pill-sub">Häuser werden geladen …</small></span>
+  <span><b id="pill-title">Wichtelweg</b><small id="pill-sub"></small></span>
 </button>
 
 <aside class="panel" id="panel" aria-label="Wichtelweg" aria-hidden="true">
   <button class="close" id="btn-close" aria-label="Menü schliessen">✕</button>
   <div class="panel-scroll">
     <header class="brand">
-      <h1>Wichtelweg</h1>
+      <h1 id="title">Wichtelweg</h1>
       <p class="when" id="when"></p>
       <div class="when-edit" id="when-edit" hidden>
-        <label for="when-input">Text unter dem Titel</label>
+        <label for="title-input">Titel</label>
+        <input type="text" id="title-input" maxlength="40" placeholder="Wichtelweg">
+        <label for="when-input" style="margin-top:8px">Text unter dem Titel</label>
         <div class="row"><input type="text" id="when-input" maxlength="120" placeholder="1. bis 24. Dezember, täglich ab 17 Uhr"><button class="btn" id="when-save">Speichern</button></div>
         <small id="when-info"></small>
       </div>
-      <p id="summary">Häuser werden geladen …</p>
+      <p id="summary"></p>
     </header>
 
     <div class="adminbar" id="adminbar" hidden>
@@ -3794,9 +3797,9 @@ const db = {
     if (!r.ok) throw new Error('Einstellungen nicht geladen (' + r.status + ')');
     const o = {}; (await r.json()).forEach(x => { o[x.schluessel] = x.wert; }); return o;
   },
-  async setSetting(schluessel, wert) {
-    if (DEMO) { const o = store.get(DEMO_KEY + '-einstellungen') || {}; o[schluessel] = wert; store.set(DEMO_KEY + '-einstellungen', o); return; }
-    await this.write('POST', 'einstellungen?on_conflict=schluessel', [{schluessel, wert}]);
+  async setSettings(obj) {
+    if (DEMO) { store.set(DEMO_KEY + '-einstellungen', {...(store.get(DEMO_KEY + '-einstellungen') || {}), ...obj}); return; }
+    await this.write('POST', 'einstellungen?on_conflict=schluessel', Object.entries(obj).map(([schluessel, wert]) => ({schluessel, wert})));
   },
   logout() {
     if (!DEMO && this.session) fetch(`${API}/auth/v1/logout`, {method: 'POST', headers: this.headers(true)}).catch(() => {});
@@ -4011,10 +4014,9 @@ function renderList() {
   const items = [...part.keys()].map(id => byId.get(id) || {id, str: 'Unbekannte Adresse', nr: String(id), missing: true})
     .sort((x, y) => coll.compare(label(x), label(y)));
   const n = items.length;
-  document.getElementById('count').textContent = loaded ? String(n) : '';
-  document.getElementById('summary').innerHTML = !loaded ? document.getElementById('summary').innerHTML
-    : n ? `<strong>${n === 1 ? '1 Haus macht' : n + ' Häuser machen'} mit.</strong> Tippe auf ein markiertes Haus.`
-        : (isAdmin() ? 'Noch keine Häuser eingetragen.' : 'Die Häuser werden bald eingetragen. Schau später wieder vorbei.');
+  document.getElementById('count').textContent = loaded && isAdmin() ? String(n) : '';
+  if (loaded) document.getElementById('summary').textContent = isAdmin() ? ''
+    : n ? 'Tippe auf ein markiertes Haus für Details.' : 'Die Häuser werden bald eingetragen. Schau später wieder vorbei.';
   renderPill(n);
   const empty = document.getElementById('list-empty');
   empty.hidden = n > 0; empty.textContent = isAdmin() ? 'Tippe auf ein Haus in der Karte, um es hinzuzufügen.' : 'Noch keine Häuser eingetragen.';
@@ -4089,23 +4091,33 @@ function renderPill(n) {
   const sub = document.getElementById('pill-sub');
   if (!loaded && !isAdmin()) return;
   pill.classList.toggle('edit', isAdmin());
-  sub.textContent = isAdmin() ? 'Bearbeiten' : (n ? (n === 1 ? '1 Haus macht mit' : `${n} Häuser machen mit`) : 'Bald mit Häusern');
+  sub.textContent = isAdmin() ? 'Bearbeiten' : '';
 }
-let zeitraum = CFG.zeitraum || '';
+let zeitraum = CFG.zeitraum || '', titel = CFG.titel || 'Wichtelweg';
 function renderWhen() {
+  const show = titel || 'Wichtelweg';
+  document.getElementById('title').textContent = show;
+  document.getElementById('pill-title').textContent = show;
+  document.title = show;
   document.getElementById('when').textContent = isAdmin() ? '' : zeitraum;
   document.getElementById('when-edit').hidden = !isAdmin();
-  const inp = document.getElementById('when-input'); if (document.activeElement !== inp) inp.value = zeitraum;
+  const ti = document.getElementById('title-input'), wi = document.getElementById('when-input');
+  if (document.activeElement !== ti) ti.value = titel;
+  if (document.activeElement !== wi) wi.value = zeitraum;
 }
 async function saveWhen() {
-  const inp = document.getElementById('when-input'), info = document.getElementById('when-info');
-  const val = inp.value.trim().slice(0, 120);
-  try { await db.setSetting('zeitraum', val); zeitraum = val; info.textContent = 'Gespeichert'; renderWhen(); }
-  catch (err) { info.textContent = ''; toast(err.status === 404 ? 'Text nicht gespeichert. In Supabase fehlt noch die Ergänzung «Einstellungen» (siehe Anleitung).' : err.message, true); if (!isAdmin()) renderAdmin(); }
+  const info = document.getElementById('when-info');
+  const t = document.getElementById('title-input').value.trim().slice(0, 40) || 'Wichtelweg';
+  const z = document.getElementById('when-input').value.trim().slice(0, 120);
+  try { await db.setSettings({titel: t, zeitraum: z}); titel = t; zeitraum = z; info.textContent = 'Gespeichert'; renderWhen(); }
+  catch (err) { info.textContent = ''; toast([403, 404].includes(err.status) ? 'Nicht gespeichert. In Supabase fehlt noch die aktuelle Ergänzung «Einstellungen» (siehe Anleitung).' : err.message, true); if (!isAdmin()) renderAdmin(); }
 }
 document.getElementById('when-save').onclick = saveWhen;
-document.getElementById('when-input').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); saveWhen(); } });
-document.getElementById('when-input').addEventListener('input', () => { document.getElementById('when-info').textContent = ''; });
+['title-input', 'when-input'].forEach(id => {
+  const el = document.getElementById(id);
+  el.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); saveWhen(); } });
+  el.addEventListener('input', () => { document.getElementById('when-info').textContent = ''; });
+});
 
 /* Meldungen */
 let toastTimer = null;
@@ -4189,7 +4201,7 @@ async function loadParticipants(quiet) {
   renderAll(); refreshPopup();
 }
 async function loadSettings() {
-  try { const s = await db.settings(); if (typeof s.zeitraum === 'string') zeitraum = s.zeitraum; } catch (e) { /* ältere Datenbank ohne Einstellungen: Text aus config.js */ }
+  try { const s = await db.settings(); if (typeof s.zeitraum === 'string') zeitraum = s.zeitraum; if (typeof s.titel === 'string' && s.titel) titel = s.titel; } catch (e) { /* ältere Datenbank ohne Einstellungen: Text aus config.js */ }
   renderWhen();
 }
 fitQuartier(); updateArrow(); updateStreetLabels(); updateZoomClasses();

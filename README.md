@@ -45,7 +45,7 @@ Tipp: Öffne `public/index.html` vorher einmal per Doppelklick. Ohne Datenbank l
    };
    ```
 
-   Die Zeile `zeitraum` ist nur der Ersatztext, falls die Datenbank keinen Text liefert. Ändern kannst du den Text bequemer direkt in der Karte (siehe «Text unter dem Titel ändern»).
+   Die Zeile `zeitraum` ist nur der Ersatztext, falls die Datenbank keinen Text liefert. Ändern kannst du den Text bequemer direkt in der Karte (siehe «Titel und Text unter dem Titel ändern»).
 
    Dieser Schlüssel ist öffentlich und darf in der Karte stehen. **Niemals** den «secret» oder «service_role» Key eintragen.
 3. **Commit changes** klicken. Alternativ schickst du mir die beiden Werte, und ich trage sie ein.
@@ -67,11 +67,11 @@ Tipp: Öffne `public/index.html` vorher einmal per Doppelklick. Ohne Datenbank l
 
 **Häuser ein- und austragen** geht jederzeit direkt auf der Karte, ohne GitHub.
 
-## Text unter dem Titel ändern
+## Titel und Text unter dem Titel ändern
 
-Nach dem Anmelden erscheint im Menü direkt unter «Wichtelweg» ein Feld **Text unter dem Titel**, z. B. für «1. bis 24. Dezember, täglich ab 17 Uhr». Text anpassen und **Speichern** klicken. Die Änderung ist sofort für alle sichtbar.
+Nach dem Anmelden erscheinen im Menü oben die Felder **Titel** (z. B. «Wichtelweg») und **Text unter dem Titel** (z. B. «1. bis 24. Dezember, täglich ab 17 Uhr»). Anpassen und **Speichern** klicken. Die Änderung ist sofort für alle sichtbar.
 
-**Einmalig nötig**, falls die Datenbank vor dem 3. November 2026 eingerichtet wurde: In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-einstellungen.sql` einfügen und **Run** klicken. Bis dahin zeigt die Karte den Text aus `public/config.js`, und Speichern im Menü meldet einen Hinweis.
+**Einmalig nötig** (auch erneut, falls du die Ergänzung schon für den Text allein ausgeführt hast): In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-einstellungen.sql` einfügen und **Run** klicken. Bis dahin zeigt die Karte den Text aus `public/config.js`, und Speichern im Menü meldet einen Hinweis.
 
 ## Schritt 4: In die Jimdo-Seite einbetten
 
