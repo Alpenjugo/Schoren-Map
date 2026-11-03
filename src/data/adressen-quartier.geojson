@@ -1,0 +1,5191 @@
+{
+ "type": "FeatureCollection",
+ "name": "adressen_quartier",
+ "datenquelle": "swisstopo, Amtliches Gebäudeadressverzeichnis (api3.geo.admin.ch), abgerufen 2026-11-03",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360321,
+     47.424504
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624214,
+    "bdg_egid": 1070664,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "other_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 13.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360287,
+     47.424649
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624216,
+    "bdg_egid": 1070666,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 24.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360711,
+     47.424981
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624218,
+    "bdg_egid": 1070669,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "23",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 24.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361125,
+     47.425305
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624221,
+    "bdg_egid": 1070673,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "27",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 26.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36092,
+     47.426318
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624532,
+    "bdg_egid": 1070775,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "53",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 45.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360991,
+     47.426419
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624533,
+    "bdg_egid": 1070777,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "57",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 37.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361288,
+     47.426493
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624534,
+    "bdg_egid": 1070778,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "59",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 13.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36078,
+     47.427077
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624890,
+    "bdg_egid": 1070764,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 30.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36112,
+     47.427151
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624891,
+    "bdg_egid": 1070765,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "18",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 3.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361068,
+     47.427232
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624892,
+    "bdg_egid": 1070767,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "20",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 4.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360318,
+     47.425995
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624894,
+    "bdg_egid": 1070770,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "43",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 99.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360859,
+     47.426247
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624895,
+    "bdg_egid": 1070773,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "49",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 52.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360876,
+     47.426268
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624896,
+    "bdg_egid": 1070774,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "51",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 50.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359926,
+     47.425672
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625350,
+    "bdg_egid": 1070708,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "31",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 119.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360114,
+     47.425772
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625351,
+    "bdg_egid": 1070711,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "37",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 116.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360154,
+     47.425793
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625352,
+    "bdg_egid": 1070712,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "39",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 116.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360031,
+     47.425278
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625356,
+    "bdg_egid": 1070721,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "32",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 84.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36009,
+     47.425109
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625357,
+    "bdg_egid": 1070722,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "34",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 68.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360467,
+     47.42555
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625358,
+    "bdg_egid": 1070723,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "38",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 80.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360528,
+     47.425372
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625359,
+    "bdg_egid": 1070724,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "40",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 63.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360895,
+     47.425808
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625360,
+    "bdg_egid": 1070725,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "44",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 64.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361538,
+     47.425895
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625361,
+    "bdg_egid": 1070728,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "52",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 15.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360979,
+     47.426629
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625381,
+    "bdg_egid": 1070758,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "4",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 31.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360984,
+     47.426653
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625382,
+    "bdg_egid": 1070759,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "6",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 29.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361168,
+     47.42704
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625383,
+    "bdg_egid": 1070761,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "12",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 3.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361124,
+     47.427139
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625385,
+    "bdg_egid": 1070763,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "16",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 3.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361372,
+     47.426551
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626005,
+    "bdg_egid": 1070779,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "61",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 5.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361222,
+     47.426886
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626006,
+    "bdg_egid": 1070780,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "1",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 5.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360615,
+     47.426849
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626007,
+    "bdg_egid": 1070784,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "6",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 50.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360501,
+     47.426572
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626008,
+    "bdg_egid": 1070785,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "7",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 67.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360446,
+     47.426532
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626009,
+    "bdg_egid": 1070786,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "9",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 72.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360402,
+     47.4265
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626010,
+    "bdg_egid": 1070787,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 76.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360331,
+     47.426457
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626011,
+    "bdg_egid": 1070788,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 83.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360544,
+     47.427343
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626017,
+    "bdg_egid": 1070800,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "4",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 30.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360372,
+     47.427261
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626018,
+    "bdg_egid": 1070801,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "6",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 45.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360395,
+     47.427075
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626019,
+    "bdg_egid": 1070802,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "9",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 57.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360089,
+     47.426861
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626020,
+    "bdg_egid": 1070805,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 72.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360071,
+     47.42683
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626021,
+    "bdg_egid": 1070806,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 73.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359993,
+     47.426771
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626022,
+    "bdg_egid": 1070807,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 71.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359925,
+     47.426723
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626023,
+    "bdg_egid": 1070808,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "21",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 69.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360048,
+     47.427259
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626024,
+    "bdg_egid": 1070809,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "1",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 36.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359949,
+     47.427203
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626025,
+    "bdg_egid": 1070810,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "3",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 36.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360538,
+     47.427538
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626029,
+    "bdg_egid": 1070819,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "1",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 13.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360475,
+     47.427554
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626030,
+    "bdg_egid": 1070820,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "3",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 17.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360374,
+     47.427574
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626031,
+    "bdg_egid": 1070821,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "5",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 24.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360107,
+     47.427567
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626032,
+    "bdg_egid": 1070824,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 12.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360715,
+     47.425821
+    ]
+   },
+   "properties": {
+    "adr_egaid": 101089431,
+    "bdg_egid": 2363882,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "42",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 76.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359819,
+     47.424382
+    ]
+   },
+   "properties": {
+    "adr_egaid": 101362903,
+    "bdg_egid": 400000304,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 31.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36112,
+     47.426873
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102109566,
+    "bdg_egid": 1070781,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "3",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 12.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360183,
+     47.425895
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102112797,
+    "bdg_egid": 1070713,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "41",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 112.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359965,
+     47.425694
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102113868,
+    "bdg_egid": 1070709,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "33",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 118.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36068,
+     47.426682
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117365,
+    "bdg_egid": 1070783,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "5",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 50.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360739,
+     47.424833
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117529,
+    "bdg_egid": 1070668,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "21",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 11.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361496,
+     47.426095
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117532,
+    "bdg_egid": 1070727,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "50",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 11.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361,
+     47.426703
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117533,
+    "bdg_egid": 1070760,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "8",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 27.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360552,
+     47.426133
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117535,
+    "bdg_egid": 1070771,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "45",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 78.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360281,
+     47.42758
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117537,
+    "bdg_egid": 1070822,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "7",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 20.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359933,
+     47.427195
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117538,
+    "bdg_egid": 1070811,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "5",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 36.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361158,
+     47.425161
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118899,
+    "bdg_egid": 1070671,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "25",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 13.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360057,
+     47.425738
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118902,
+    "bdg_egid": 1070710,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "35",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 116.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360688,
+     47.426897
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118904,
+    "bdg_egid": 1070782,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "4",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 43.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360972,
+     47.426391
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102119327,
+    "bdg_egid": 1070776,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "55",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 39.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360715,
+     47.427406
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102121675,
+    "bdg_egid": 1070799,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "2",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 17.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360325,
+     47.427029
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102121676,
+    "bdg_egid": 1070803,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 65.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360956,
+     47.425643
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102123126,
+    "bdg_egid": 1070726,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "46",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 62.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360762,
+     47.427107
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124037,
+    "bdg_egid": 1070766,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 31.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360259,
+     47.426982
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124038,
+    "bdg_egid": 1070804,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 70.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360701,
+     47.426217
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124445,
+    "bdg_egid": 1070772,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "47",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 64.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360684,
+     47.42715
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102235737,
+    "bdg_egid": 1070768,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "21",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 35.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360965,
+     47.426573
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102236603,
+    "bdg_egid": 1070757,
+    "adr_edid": 0,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "2",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 33.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360177,
+     47.427575
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102240779,
+    "bdg_egid": 1070823,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "9",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 15.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361159,
+     47.427063
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102434188,
+    "bdg_egid": 1070761,
+    "adr_edid": 2,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "14",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 3.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361062,
+     47.427247
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102438300,
+    "bdg_egid": 1070767,
+    "adr_edid": 2,
+    "str_esid": 10022225,
+    "stn_label": "Lenaustrasse",
+    "adr_number": "22",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 4.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361289,
+     47.42655
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102471858,
+    "bdg_egid": 500000409,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "61.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 11.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360267,
+     47.426354
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102472246,
+    "bdg_egid": 500002679,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "13a.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 91.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.360619,
+     47.427915
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102473433,
+    "bdg_egid": 500000295,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "6.02",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 6.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361189,
+     47.426019
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102474663,
+    "bdg_egid": 500004131,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "48.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 36.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359606,
+     47.425588
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624229,
+    "bdg_egid": 1070686,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "3",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 119.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359033,
+     47.425492
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624230,
+    "bdg_egid": 1070688,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "7",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 94.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358924,
+     47.425489
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624231,
+    "bdg_egid": 1070689,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "9",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 88.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358869,
+     47.425487
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624232,
+    "bdg_egid": 1070690,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 85.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358778,
+     47.425483
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624461,
+    "bdg_egid": 1070691,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 80.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359273,
+     47.425384
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624462,
+    "bdg_egid": 1070693,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "3",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 116.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359199,
+     47.425335
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624463,
+    "bdg_egid": 1070694,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "5",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 115.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359048,
+     47.425238
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625337,
+    "bdg_egid": 1070695,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "7",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 113.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358978,
+     47.425189
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625338,
+    "bdg_egid": 1070696,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "9",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 112.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358826,
+     47.425092
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625339,
+    "bdg_egid": 1070697,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 106.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358635,
+     47.425238
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625340,
+    "bdg_egid": 1070698,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "12",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 88.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358754,
+     47.42504
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625341,
+    "bdg_egid": 1070699,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 99.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358561,
+     47.425185
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625342,
+    "bdg_egid": 1070700,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "14",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 87.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358613,
+     47.424166
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625343,
+    "bdg_egid": 1070701,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 31.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358193,
+     47.424349
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625344,
+    "bdg_egid": 1070702,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "15a",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 28.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358571,
+     47.42452
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625345,
+    "bdg_egid": 1070703,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 60.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358592,
+     47.424768
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625346,
+    "bdg_egid": 1070704,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 72.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358669,
+     47.424909
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625347,
+    "bdg_egid": 1070705,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "21",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 85.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35927,
+     47.424857
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625348,
+    "bdg_egid": 1070706,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "22",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 98.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359602,
+     47.42501
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625349,
+    "bdg_egid": 1070707,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "26",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 89.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358488,
+     47.4254
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625353,
+    "bdg_egid": 1070714,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "33",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 68.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359661,
+     47.424844
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625354,
+    "bdg_egid": 1070719,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "28",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 75.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358305,
+     47.425304
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625355,
+    "bdg_egid": 1070720,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "35",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 64.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358841,
+     47.425768
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625362,
+    "bdg_egid": 1070729,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "14",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 64.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358777,
+     47.425765
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625363,
+    "bdg_egid": 1070731,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "16",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 60.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358543,
+     47.425656
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625364,
+    "bdg_egid": 1070732,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 54.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358623,
+     47.42585
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625365,
+    "bdg_egid": 1070733,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "18",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 45.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359788,
+     47.426621
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625366,
+    "bdg_egid": 1070734,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "23",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 63.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359715,
+     47.426573
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625367,
+    "bdg_egid": 1070735,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "25",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 60.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359644,
+     47.426523
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625368,
+    "bdg_egid": 1070736,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "27",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 58.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359579,
+     47.426473
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625369,
+    "bdg_egid": 1070737,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "29",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 56.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359507,
+     47.426425
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625370,
+    "bdg_egid": 1070738,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "31",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 55.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359415,
+     47.426329
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625371,
+    "bdg_egid": 1070739,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "33",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 54.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359187,
+     47.42622
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625372,
+    "bdg_egid": 1070741,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "37",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 48.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359153,
+     47.426215
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625373,
+    "bdg_egid": 1070742,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "39",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 47.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358977,
+     47.426115
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625374,
+    "bdg_egid": 1070743,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "41",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 45.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358898,
+     47.426075
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625375,
+    "bdg_egid": 1070744,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "43",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 43.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358375,
+     47.425717
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625376,
+    "bdg_egid": 1070749,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "51",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 40.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358202,
+     47.425694
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625377,
+    "bdg_egid": 1070750,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "53",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 31.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357747,
+     47.42551
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625378,
+    "bdg_egid": 1070753,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "59",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 18.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359634,
+     47.42598
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626012,
+    "bdg_egid": 1070791,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 91.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359559,
+     47.425925
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626013,
+    "bdg_egid": 1070792,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "21",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 91.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359378,
+     47.425835
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626014,
+    "bdg_egid": 1070793,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "23",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 88.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35907,
+     47.425819
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626015,
+    "bdg_egid": 1070795,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "26",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 72.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35913,
+     47.425702
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626016,
+    "bdg_egid": 1070798,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "29",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 85.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359677,
+     47.427021
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626026,
+    "bdg_egid": 1070813,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "9",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 37.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359508,
+     47.426902
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626027,
+    "bdg_egid": 1070814,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 32.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359157,
+     47.426648
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626028,
+    "bdg_egid": 1070818,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 19.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359771,
+     47.427417
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626033,
+    "bdg_egid": 1070826,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359759,
+     47.42741
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626034,
+    "bdg_egid": 1070827,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359631,
+     47.427336
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626035,
+    "bdg_egid": 1070828,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "19",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359618,
+     47.427331
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626036,
+    "bdg_egid": 1070829,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "21",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359527,
+     47.427269
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626037,
+    "bdg_egid": 1070830,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "23",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 10.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359253,
+     47.427024
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626038,
+    "bdg_egid": 1070833,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "29",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 8.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359244,
+     47.427014
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626039,
+    "bdg_egid": 1070834,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "31",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 8.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358905,
+     47.426519
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626040,
+    "bdg_egid": 1070835,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "33",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 11.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358818,
+     47.426437
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626041,
+    "bdg_egid": 1070837,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "37",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 11.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358744,
+     47.426398
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626042,
+    "bdg_egid": 1070838,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "39",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 10.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358565,
+     47.426307
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626043,
+    "bdg_egid": 1070839,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "41",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 7.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358454,
+     47.426228
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626044,
+    "bdg_egid": 1070840,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "43",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 7.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358478,
+     47.426067
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100626045,
+    "bdg_egid": 1070841,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "45",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 21.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35966,
+     47.424271
+    ]
+   },
+   "properties": {
+    "adr_egaid": 101152976,
+    "bdg_egid": 2363133,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 31.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357828,
+     47.42555
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102104346,
+    "bdg_egid": 1070752,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "57",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 19.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358605,
+     47.42561
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102110016,
+    "bdg_egid": 1070730,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 61.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358818,
+     47.426036
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102110867,
+    "bdg_egid": 1070745,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "45",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 42.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359401,
+     47.426825
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102111054,
+    "bdg_egid": 1070816,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 28.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358736,
+     47.425996
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102111205,
+    "bdg_egid": 1070746,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "47",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 40.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35945,
+     47.426862
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102111261,
+    "bdg_egid": 1070815,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 30.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358233,
+     47.424828
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102111451,
+    "bdg_egid": 1070716,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "39",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 53.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359383,
+     47.425444
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102111869,
+    "bdg_egid": 1070692,
+    "adr_edid": 0,
+    "str_esid": 10089071,
+    "stn_label": "Fichteweg",
+    "adr_number": "1",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 118.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359337,
+     47.425813
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102111873,
+    "bdg_egid": 1070794,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "25",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 87.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357908,
+     47.425589
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102113927,
+    "bdg_egid": 1070751,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "55",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 21.3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358519,
+     47.423965
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102114142,
+    "bdg_egid": 1070656,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "11",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 23.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359669,
+     47.426003
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102114270,
+    "bdg_egid": 1070790,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 91.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358262,
+     47.425007
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117531,
+    "bdg_egid": 1070715,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "37",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 68.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357901,
+     47.425829
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117534,
+    "bdg_egid": 1070748,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "50",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 4.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358925,
+     47.425797
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102117536,
+    "bdg_egid": 1070797,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "28",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 66.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359279,
+     47.425784
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118900,
+    "bdg_egid": 1070796,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "27",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 86.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359746,
+     47.427071
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118901,
+    "bdg_egid": 1070812,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "7",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 37.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35934,
+     47.427119
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118903,
+    "bdg_egid": 1070832,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "27",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358886,
+     47.426476
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102121225,
+    "bdg_egid": 1070836,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "35",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 12.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359531,
+     47.425557
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102121229,
+    "bdg_egid": 1070687,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "5",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 117.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35822,
+     47.425984
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102121674,
+    "bdg_egid": 1070747,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "48",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 12.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359681,
+     47.425619
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124035,
+    "bdg_egid": 1070685,
+    "adr_edid": 0,
+    "str_esid": 10027019,
+    "stn_label": "Fichtestrasse",
+    "adr_number": "1",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 121.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359843,
+     47.427457
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124039,
+    "bdg_egid": 1070825,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "13",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357885,
+     47.42457
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124444,
+    "bdg_egid": 1070717,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "47",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 15.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359352,
+     47.42713
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102124446,
+    "bdg_egid": 1070831,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "25",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 9.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.35926,
+     47.426267
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102230214,
+    "bdg_egid": 1070740,
+    "adr_edid": 0,
+    "str_esid": 10107225,
+    "stn_label": "Paul-Brandt-Strasse",
+    "adr_number": "35",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 49.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359224,
+     47.426697
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102235492,
+    "bdg_egid": 1070817,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "17",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 21.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359729,
+     47.426041
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102235908,
+    "bdg_egid": 1070789,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "15",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 92.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358356,
+     47.424005
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102240782,
+    "bdg_egid": 1070657,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "11a",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 27.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357447,
+     47.42486
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102468636,
+    "bdg_egid": 191768654,
+    "adr_edid": 0,
+    "str_esid": 10026696,
+    "stn_label": "Tambourenstrasse",
+    "adr_number": "30",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 21.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357329,
+     47.425052
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102468721,
+    "bdg_egid": 191768794,
+    "adr_edid": 0,
+    "str_esid": 10026696,
+    "stn_label": "Tambourenstrasse",
+    "adr_number": "30.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 12.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357513,
+     47.425176
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102468722,
+    "bdg_egid": 191768795,
+    "adr_edid": 0,
+    "str_esid": 10026696,
+    "stn_label": "Tambourenstrasse",
+    "adr_number": "34",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 20.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359598,
+     47.426952
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102471361,
+    "bdg_egid": 500000014,
+    "adr_edid": 0,
+    "str_esid": 10022245,
+    "stn_label": "Paul-Brandt-Weg",
+    "adr_number": "11.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 35.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358871,
+     47.424706
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102472098,
+    "bdg_egid": 500001064,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "21.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 85.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358519,
+     47.426157
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102474034,
+    "bdg_egid": 500000296,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "43.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 16.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358249,
+     47.424488
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102474166,
+    "bdg_egid": 500004009,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "15b.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 36.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359427,
+     47.424987
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102474300,
+    "bdg_egid": 500003688,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "26.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 99.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357893,
+     47.42476
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102475325,
+    "bdg_egid": 500000679,
+    "adr_edid": 0,
+    "str_esid": 10022260,
+    "stn_label": "Sonnenbergstrasse",
+    "adr_number": "47.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 28.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359108,
+     47.426702
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102954749,
+    "bdg_egid": 191942064,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "31.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 13.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.359153,
+     47.426737
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102954750,
+    "bdg_egid": 191942065,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "31.02",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "innen",
+    "dist_grenze_m": 14.6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.36105,
+     47.424704
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624219,
+    "bdg_egid": 1070670,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "24",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 15.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361435,
+     47.425017
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100624220,
+    "bdg_egid": 1070672,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "26",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 13.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361815,
+     47.425202
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102118905,
+    "bdg_egid": 1070860,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "28",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "partly_residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 17.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361028,
+     47.42802
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102471169,
+    "bdg_egid": 500004029,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "6.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 20.5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.3608,
+     47.424501
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102471628,
+    "bdg_egid": 500003831,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "24.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 15.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361002,
+     47.427524
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102472089,
+    "bdg_egid": 500001062,
+    "adr_edid": 0,
+    "str_esid": 10022255,
+    "stn_label": "Schäflerstrasse",
+    "adr_number": "2.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 5.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361705,
+     47.426293
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102474729,
+    "bdg_egid": 500004149,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "56.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 10.2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361213,
+     47.424828
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102475383,
+    "bdg_egid": 500003797,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "26.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "special",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 15.7
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.361768,
+     47.425213
+    ]
+   },
+   "properties": {
+    "adr_egaid": 103536727,
+    "bdg_egid": 192043821,
+    "adr_edid": 0,
+    "str_esid": 10027012,
+    "stn_label": "Dietlistrasse",
+    "adr_number": "28.02",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 14.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358959,
+     47.423853
+    ]
+   },
+   "properties": {
+    "adr_egaid": 100625593,
+    "bdg_egid": 1070655,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "10",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 9.1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358356,
+     47.423543
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102114268,
+    "bdg_egid": 1070654,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "7",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 23.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.357291,
+     47.424487
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102472969,
+    "bdg_egid": 500003437,
+    "adr_edid": 0,
+    "str_esid": 10027017,
+    "stn_label": "Feldlistrasse",
+    "adr_number": "18.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 21.4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.358709,
+     47.42354
+    ]
+   },
+   "properties": {
+    "adr_egaid": 102475119,
+    "bdg_egid": 500001888,
+    "adr_edid": 0,
+    "str_esid": 10176220,
+    "stn_label": "Schorenstrasse",
+    "adr_number": "10.01",
+    "zip_label": "9000 St. Gallen",
+    "com_fosnr": 3203,
+    "com_name": "St. Gallen",
+    "adr_status": "1",
+    "adr_official": true,
+    "bdg_category": "non_residential",
+    "adr_modified": "20260825",
+    "zone": "rand",
+    "dist_grenze_m": 22.4
+   }
+  }
+ ]
+}
