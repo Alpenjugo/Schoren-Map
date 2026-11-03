@@ -9,7 +9,7 @@
 <style>
 @font-face{font-family:"Bricolage";src:url(data:font/woff2;base64,/*FONT*/) format("woff2");font-weight:200 800;font-display:swap}
 :root{
-  --map:#e6dccd; --area:#f6f0e7; --house:#e0d3c2; --house-none:#e9e0d4; --edge:#bfa98f;
+  --map:#f2ece3; --house:#e0d3c2; --house-none:#e9e0d4; --edge:#bfa98f;
   --street:#fffdf9; --street-edge:#dccdb9; --path:#b39f86;
   --ink:#3b2a1e; --muted:#76624f; --line:#eadfcf; --panel:#fffdf9;
   --brown:#4a3324;
@@ -39,6 +39,12 @@ button,input{font:inherit;color:inherit}
 .close{position:absolute;right:12px;top:12px;width:36px;height:36px;border:0;border-radius:50%;background:#f3ebe0;color:var(--brown);cursor:pointer;font-size:18px;line-height:1}
 .close:hover{background:#eadfcf}
 .brand .when{margin:6px 0 0;color:var(--brown);font-weight:650}
+.brand .when:empty{display:none}
+.when-edit{margin-top:10px}
+.when-edit label{display:block;font-size:13px;font-weight:650;color:var(--muted);margin-bottom:4px}
+.when-edit .row{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.when-edit input{flex:1 1 100%;min-width:0;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:#fff}
+.when-edit small{display:block;font-size:12.5px;color:var(--muted);min-height:1em;margin-top:3px}
 .panel-scroll{overflow-y:auto;padding:24px 22px 16px;display:flex;flex-direction:column;gap:20px;flex:1}
 .brand h1{font-size:40px;line-height:1;font-weight:800;letter-spacing:-.035em;margin:0;color:var(--brown);padding-right:40px}
 .brand p{margin:8px 0 0;color:var(--muted)}
@@ -174,6 +180,11 @@ dialog .row{display:flex;justify-content:flex-end;gap:8px}
     <header class="brand">
       <h1>Wichtelweg</h1>
       <p class="when" id="when"></p>
+      <div class="when-edit" id="when-edit" hidden>
+        <label for="when-input">Text unter dem Titel</label>
+        <div class="row"><input type="text" id="when-input" maxlength="120" placeholder="1. bis 24. Dezember, täglich ab 17 Uhr"><button class="btn" id="when-save">Speichern</button></div>
+        <small id="when-info"></small>
+      </div>
       <p id="summary">Häuser werden geladen …</p>
     </header>
 
@@ -278,18 +289,28 @@ const db = {
   },
   async write(method, query, body) {
     await this.fresh();
-    const r = await fetch(`${API}/rest/v1/teilnehmer${query}`, {method, body: body && JSON.stringify(body),
+    const r = await fetch(`${API}/rest/v1/${query}`, {method, body: body && JSON.stringify(body),
       headers: {...this.headers(true), Prefer: 'resolution=merge-duplicates,return=minimal'}});
     if (r.status === 401) { this.logout(); throw new Error('Anmeldung abgelaufen. Melde dich neu an.'); }
-    if (!r.ok) throw new Error('Änderung nicht gespeichert. Versuche es noch einmal.');
+    if (!r.ok) { const e = new Error('Änderung nicht gespeichert. Versuche es noch einmal.'); e.status = r.status; throw e; }
   },
   async upsert(egaid, hinweis) {
     if (DEMO) { const l = (store.get(DEMO_KEY) || []).filter(x => x.egaid !== egaid); l.push({egaid, hinweis}); store.set(DEMO_KEY, l); return; }
-    await this.write('POST', '?on_conflict=egaid', [{egaid, hinweis}]);
+    await this.write('POST', 'teilnehmer?on_conflict=egaid', [{egaid, hinweis}]);
   },
   async remove(egaid) {
     if (DEMO) { store.set(DEMO_KEY, (store.get(DEMO_KEY) || []).filter(x => x.egaid !== egaid)); return; }
-    await this.write('DELETE', `?egaid=eq.${encodeURIComponent(egaid)}`);
+    await this.write('DELETE', `teilnehmer?egaid=eq.${encodeURIComponent(egaid)}`);
+  },
+  async settings() {
+    if (DEMO) return store.get(DEMO_KEY + '-einstellungen') || {};
+    const r = await fetch(`${API}/rest/v1/einstellungen?select=schluessel,wert`, {headers: this.headers(false), cache: 'no-store'});
+    if (!r.ok) throw new Error('Einstellungen nicht geladen (' + r.status + ')');
+    const o = {}; (await r.json()).forEach(x => { o[x.schluessel] = x.wert; }); return o;
+  },
+  async setSetting(schluessel, wert) {
+    if (DEMO) { const o = store.get(DEMO_KEY + '-einstellungen') || {}; o[schluessel] = wert; store.set(DEMO_KEY + '-einstellungen', o); return; }
+    await this.write('POST', 'einstellungen?on_conflict=schluessel', [{schluessel, wert}]);
   },
   logout() {
     if (!DEMO && this.session) fetch(`${API}/auth/v1/logout`, {method: 'POST', headers: this.headers(true)}).catch(() => {});
@@ -362,10 +383,7 @@ if (embedded) {
   new FullBtn().addTo(map);
 }
 
-map.createPane('flaeche', map.getPane('rotatePane')).style.zIndex = 330;
 map.createPane('strassen', map.getPane('rotatePane')).style.zIndex = 340;
-/* Das Quartier als helle Fläche, die Umgebung tritt zurück */
-L.polygon(GRENZE, {pane: 'flaeche', stroke: true, color: '#d9cbb7', weight: 1, fillColor: '#f6f0e7', fillOpacity: 1, interactive: false, smoothFactor: 1}).addTo(map);
 map.createPane('gebaeude', map.getPane('rotatePane')).style.zIndex = 350;
 map.createPane('beschriftung', map.getPane('norotatePane')).style.zIndex = 380;
 map.getPane('beschriftung').style.pointerEvents = 'none';
@@ -587,7 +605,21 @@ function renderPill(n) {
   pill.classList.toggle('edit', isAdmin());
   sub.textContent = isAdmin() ? 'Bearbeiten' : (n ? (n === 1 ? '1 Haus macht mit' : `${n} Häuser machen mit`) : 'Bald mit Häusern');
 }
-document.getElementById('when').textContent = CFG.zeitraum || '1. bis 24. Dezember, täglich ab 17 Uhr';
+let zeitraum = CFG.zeitraum || '';
+function renderWhen() {
+  document.getElementById('when').textContent = isAdmin() ? '' : zeitraum;
+  document.getElementById('when-edit').hidden = !isAdmin();
+  const inp = document.getElementById('when-input'); if (document.activeElement !== inp) inp.value = zeitraum;
+}
+async function saveWhen() {
+  const inp = document.getElementById('when-input'), info = document.getElementById('when-info');
+  const val = inp.value.trim().slice(0, 120);
+  try { await db.setSetting('zeitraum', val); zeitraum = val; info.textContent = 'Gespeichert'; renderWhen(); }
+  catch (err) { info.textContent = ''; toast(err.status === 404 ? 'Text nicht gespeichert. In Supabase fehlt noch die Ergänzung «Einstellungen» (siehe Anleitung).' : err.message, true); if (!isAdmin()) renderAdmin(); }
+}
+document.getElementById('when-save').onclick = saveWhen;
+document.getElementById('when-input').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); saveWhen(); } });
+document.getElementById('when-input').addEventListener('input', () => { document.getElementById('when-info').textContent = ''; });
 
 /* Meldungen */
 let toastTimer = null;
@@ -623,6 +655,7 @@ function renderAdmin() {
   document.getElementById('btn-login').hidden = on;
   document.getElementById('who').textContent = on ? (db.session.email || '') + (DEMO ? ' (Demo)' : '') : '';
   if (on) document.getElementById('list').open = true;
+  renderWhen();
 }
 
 /* CSV für die Verwaltung */
@@ -669,12 +702,16 @@ async function loadParticipants(quiet) {
   }
   renderAll(); refreshPopup();
 }
+async function loadSettings() {
+  try { const s = await db.settings(); if (typeof s.zeitraum === 'string') zeitraum = s.zeitraum; } catch (e) { /* ältere Datenbank ohne Einstellungen: Text aus config.js */ }
+  renderWhen();
+}
 fitQuartier(); updateArrow(); updateStreetLabels(); updateZoomClasses();
 map.on('rotate zoomend moveend', updateStreetLabels);
 map.on('zoomend', updateZoomClasses);
 document.getElementById('list').open = true;
 renderAdmin();
-loadParticipants();
+loadParticipants(); loadSettings();
 document.addEventListener('visibilitychange', () => { if (!document.hidden && !isAdmin()) loadParticipants(true); });
 </script>
 </body>
