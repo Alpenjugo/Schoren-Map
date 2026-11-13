@@ -77,12 +77,14 @@ Nach dem Anmelden erscheinen im Menü oben die Felder **Titel** (z. B. «Wichtel
 
 Wenn ein Haus aufgenommen ist, erscheinen im Popup zusätzlich:
 
-- **Datum** mit Auswahl **Ab** oder **Nur am**, Eingabe als TT.MM.JJ (z. B. `05.12.26`; `5.12.` geht auch)
+- **Datum** mit Auswahl **Ab** oder **Am**, Eingabe als TT.MM.JJ (z. B. `05.12.26`; `5.12.` geht auch)
 - **Zeit von** und **bis**, Eingabe als HH.MM (z. B. `17.30`; `17` geht auch)
 
-Alle Felder sind freiwillig. Besucher sehen nur, was ausgefüllt ist, z. B. «Nur am 05.12.26, 17.00–20.30 Uhr» oder «Ab 01.12.26, jeweils ab 18.30 Uhr».
+Alle Felder sind freiwillig. Besucher sehen nur, was ausgefüllt ist, z. B. «am 05.12.26, 17.00–20.30 Uhr» oder «ab 01.12.26, jeweils ab 18.30 Uhr».
 
-**Einmalig nötig:** In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-datum-zeit.sql` einfügen und **Run** klicken. Falls du eine frühere Fassung schon ausgeführt hast, einfach nochmals ausführen: Bestehende Einträge bleiben erhalten, neu kommt die Auswahl «Nur am» dazu.
+**Aktiv oder noch nicht:** Ein Haus ist aktiv, sobald sein Datum erreicht ist (bei «Ab») bzw. genau an seinem Tag (bei «Am»); ohne Datum ist es immer aktiv. Aktive Häuser sind kräftig eingefärbt, die übrigen teilnehmenden Häuser hell mit gestricheltem Rand. Die Uhrzeit zählt dabei nicht.
+
+**Einmalig nötig:** In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-datum-zeit.sql` einfügen und **Run** klicken. Falls du eine frühere Fassung schon ausgeführt hast, einfach nochmals ausführen: Bestehende Einträge bleiben erhalten, neu kommt die Auswahl «Am» dazu.
 
 ## Schritt 4: In die Jimdo-Seite einbetten
 
