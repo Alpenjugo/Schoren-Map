@@ -81,6 +81,7 @@ details.list[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)
 .entry button.go{background:none;border:0;padding:0;cursor:pointer;font-weight:650;text-align:left}
 .entry button.go:hover{text-decoration:underline;text-underline-offset:3px}
 .entry .hint{color:var(--muted);font-size:13.5px;margin-top:1px}
+.entry .when-l{color:var(--brown);font-size:13.5px;font-weight:600;margin-top:1px}
 .entry .out{font-size:12px;color:var(--muted)}
 .rm{border:0;background:none;color:var(--muted);cursor:pointer;width:28px;height:28px;border-radius:8px;flex:none}
 .rm:hover{background:var(--red-soft);color:var(--red)}
@@ -140,8 +141,14 @@ path.bld.on{filter:drop-shadow(0 0 5px rgba(180,83,42,.55)) drop-shadow(0 2px 8p
 .toggle{border:0;border-radius:999px;padding:5px 12px;font-weight:700;font-size:13px;cursor:pointer;background:var(--red);color:#fff;white-space:nowrap}
 .toggle.on{background:var(--panel);color:var(--red);box-shadow:inset 0 0 0 1.5px var(--red)}
 .toggle:disabled{opacity:.5;cursor:wait}
-.pp-edit{margin-top:6px}
-.pp-edit input{width:100%;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:14px}
+.pp-edit{margin-top:8px}
+.pp-edit{display:flex;flex-direction:column;gap:6px}
+.pp-edit label{display:flex;flex-direction:column;gap:2px;font-size:12px;font-weight:650;color:var(--muted)}
+.pp-edit input{width:100%;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:14px;font-weight:400;color:var(--ink);background:#fff;min-width:0}
+.pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pp-grid .ab{grid-column:1 / -1}
+.pp-note{color:var(--muted);font-size:12px}
+.pp-when{color:var(--brown);font-weight:650;margin-top:2px}
 .pp-edit small{color:var(--muted);font-size:12px}
 
 /* Login */
@@ -267,7 +274,9 @@ const db = {
   },
   async list() {
     if (DEMO) return store.get(DEMO_KEY) || [];
-    const r = await fetch(`${API}/rest/v1/teilnehmer?select=egaid,hinweis`, {headers: this.headers(false), cache: 'no-store'});
+    const get = cols => fetch(`${API}/rest/v1/teilnehmer?select=${cols}`, {headers: this.headers(false), cache: 'no-store'});
+    let r = await get('egaid,hinweis,ab_datum,zeit_von,zeit_bis');
+    if ([400, 401, 403].includes(r.status)) { r = await get('egaid,hinweis'); this.hasZeit = false; } else this.hasZeit = true;
     if (!r.ok) throw new Error('Laden fehlgeschlagen (' + r.status + ')');
     return r.json();
   },
@@ -297,9 +306,10 @@ const db = {
     if (r.status === 401) { this.logout(); throw new Error('Anmeldung abgelaufen. Melde dich neu an.'); }
     if (!r.ok) { const e = new Error('Änderung nicht gespeichert. Versuche es noch einmal.'); e.status = r.status; throw e; }
   },
-  async upsert(egaid, hinweis) {
-    if (DEMO) { const l = (store.get(DEMO_KEY) || []).filter(x => x.egaid !== egaid); l.push({egaid, hinweis}); store.set(DEMO_KEY, l); return; }
-    await this.write('POST', 'teilnehmer?on_conflict=egaid', [{egaid, hinweis}]);
+  hasZeit: true,
+  async upsert(egaid, fields) {
+    if (DEMO) { const l = store.get(DEMO_KEY) || []; const old = l.find(x => x.egaid === egaid) || {}; store.set(DEMO_KEY, [...l.filter(x => x.egaid !== egaid), {...old, egaid, ...fields}]); return; }
+    await this.write('POST', 'teilnehmer?on_conflict=egaid', [{egaid, ...fields}]);
   },
   async remove(egaid) {
     if (DEMO) { store.set(DEMO_KEY, (store.get(DEMO_KEY) || []).filter(x => x.egaid !== egaid)); return; }
@@ -322,7 +332,7 @@ const db = {
 };
 
 /* ---------- Zustand ---------- */
-const part = new Map();          // EGAID -> Hinweis
+const part = new Map();          // EGAID -> {hinweis, ab_datum, zeit_von, zeit_bis}
 let loaded = false;
 const isAdmin = () => !!db.session;
 const isOn = id => part.has(id);
@@ -463,10 +473,19 @@ function popupHtml() {
   if (!list.length) return `<div class="pp-hint">${esc(emptyText || '')}</div>`;
   return list.map(a => {
     const on = isOn(a.id), out = a.zone === 'rand' ? '<div class="pp-out">knapp ausserhalb des Quartiers</div>' : '';
-    if (!isAdmin()) return `<div class="pp"><div class="pp-title">${esc(label(a))}</div>${part.get(a.id) ? `<div class="pp-hint">${esc(part.get(a.id))}</div>` : ''}</div>`;
+    const e = part.get(a.id), when = whenText(e);
+    if (!isAdmin()) return `<div class="pp"><div class="pp-title">${esc(label(a))}</div>`
+      + (when ? `<div class="pp-when">${esc(when)}</div>` : '')
+      + (e && e.hinweis ? `<div class="pp-hint">${esc(e.hinweis)}</div>` : '') + `</div>`;
     return `<div class="pp"><div class="pp-row"><div><div class="pp-title">${esc(label(a))}</div>${out}</div>`
       + `<button class="toggle${on ? ' on' : ''}" data-toggle="${a.id}">${on ? 'Entfernen' : 'Hinzufügen'}</button></div>`
-      + (on ? `<div class="pp-edit"><input type="text" maxlength="200" placeholder="Hinweis, z. B. Fenster links" data-hint="${a.id}" value="${esc(part.get(a.id) || '')}" aria-label="Hinweis zu ${esc(label(a))}"><small data-saved="${a.id}"></small></div>` : '')
+      + (on ? `<div class="pp-edit">`
+        + `<label>Hinweis<input type="text" maxlength="200" placeholder="Fenster links" data-f="hinweis" data-id="${a.id}" value="${esc(e.hinweis || '')}"></label>`
+        + (db.hasZeit ? `<div class="pp-grid"><label class="ab">Ab<input type="date" data-f="ab_datum" data-id="${a.id}" value="${esc(e.ab_datum || '')}"></label>`
+          + `<label>Zeit von<input type="time" step="900" data-f="zeit_von" data-id="${a.id}" value="${esc((e.zeit_von || '').slice(0, 5))}"></label>`
+          + `<label>bis<input type="time" step="900" data-f="zeit_bis" data-id="${a.id}" value="${esc((e.zeit_bis || '').slice(0, 5))}"></label></div>`
+          : `<small class="pp-note">Für Datum und Zeit fehlt in Supabase noch eine Ergänzung (siehe Anleitung).</small>`)
+        + `<small data-saved="${a.id}"></small></div>` : '')
       + `</div>`;
   }).join('');
 }
@@ -477,18 +496,41 @@ document.getElementById('map').addEventListener('click', async e => {
   const id = Number(b.dataset.toggle); b.disabled = true;
   try {
     if (isOn(id)) { await db.remove(id); part.delete(id); }
-    else { await db.upsert(id, ''); part.set(id, ''); }
+    else { await db.upsert(id, {hinweis: ''}); part.set(id, {hinweis: ''}); }
   } catch (err) { toast(err.message, true); if (!isAdmin()) renderAdmin(); }
   renderAll(); refreshPopup();
-  const inp = document.querySelector(`[data-hint="${id}"]`); if (inp) inp.focus();
+  const inp = document.querySelector(`[data-f="hinweis"][data-id="${id}"]`); if (inp) inp.focus();
 });
 document.getElementById('map').addEventListener('change', async e => {
-  const inp = e.target.closest('[data-hint]'); if (!inp || !isAdmin()) return;
-  const id = Number(inp.dataset.hint), val = inp.value.trim().slice(0, 200), info = document.querySelector(`[data-saved="${id}"]`);
-  try { await db.upsert(id, val); part.set(id, val); if (info) info.textContent = 'Gespeichert'; renderList(); }
+  const inp = e.target.closest('[data-f]'); if (!inp || !isAdmin()) return;
+  const id = Number(inp.dataset.id), f = inp.dataset.f, info = document.querySelector(`[data-saved="${id}"]`);
+  const cur = part.get(id) || {};
+  let val = f === 'hinweis' ? inp.value.trim().slice(0, 200) : (inp.value || null);
+  if (f === 'zeit_von' || f === 'zeit_bis') {
+    const von = f === 'zeit_von' ? val : cur.zeit_von, bis = f === 'zeit_bis' ? val : cur.zeit_bis;
+    if (von && bis && bis.slice(0, 5) <= von.slice(0, 5)) {
+      toast('Die Endzeit muss nach der Startzeit liegen.', true);
+      inp.value = (cur[f] || '').slice(0, 5); return;
+    }
+  }
+  try { await db.upsert(id, {[f]: val}); part.set(id, {...cur, [f]: val}); if (info) info.textContent = 'Gespeichert'; renderList(); }
   catch (err) { toast(err.message, true); if (!isAdmin()) renderAdmin(); }
 });
-document.getElementById('map').addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches('[data-hint]')) e.target.blur(); });
+document.getElementById('map').addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches('[data-f]')) e.target.blur(); });
+
+/* Datum und Zeit für Besucher */
+const fmtDatum = d => new Intl.DateTimeFormat('de-CH', {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'}).format(new Date(d + 'T00:00:00Z'));
+const fmtZeit = z => { const [h, m] = z.slice(0, 5).split(':'); return m === '00' ? String(Number(h)) : `${Number(h)}.${m}`; };
+function whenText(e) {
+  if (!e) return '';
+  const parts = [];
+  if (e.ab_datum) parts.push('Ab ' + fmtDatum(e.ab_datum));
+  const v = e.zeit_von, b = e.zeit_bis;
+  if (v && b) parts.push(`${fmtZeit(v)}–${fmtZeit(b)} Uhr`);
+  else if (v) parts.push(`ab ${fmtZeit(v)} Uhr`);
+  else if (b) parts.push(`bis ${fmtZeit(b)} Uhr`);
+  return parts.join(', ');
+}
 
 /* Darstellung */
 function renderMap() {
@@ -547,8 +589,9 @@ function renderList() {
     const go = document.createElement('button'); go.className = 'go'; go.textContent = a.missing ? `Adresse ${a.id}` : `${a.str} ${a.nr}`;
     if (!a.missing) go.onclick = () => focusAddr(a.id);
     ent.append(go);
-    const hint = part.get(a.id);
-    if (hint) { const d = document.createElement('div'); d.className = 'hint'; d.textContent = hint; ent.append(d); }
+    const pe = part.get(a.id) || {}, when = whenText(pe);
+    if (when) { const d = document.createElement('div'); d.className = 'when-l'; d.textContent = when; ent.append(d); }
+    if (pe.hinweis) { const d = document.createElement('div'); d.className = 'hint'; d.textContent = pe.hinweis; ent.append(d); }
     if (a.zone === 'rand') { const d = document.createElement('div'); d.className = 'out'; d.textContent = 'knapp ausserhalb des Quartiers'; ent.append(d); }
     if (a.missing) { const d = document.createElement('div'); d.className = 'out'; d.textContent = 'Nicht im Adressverzeichnis gefunden'; ent.append(d); }
     li.append(pin, ent);
@@ -673,9 +716,9 @@ function renderAdmin() {
 /* CSV für die Verwaltung */
 document.getElementById('btn-csv').onclick = () => {
   const q = v => `"${String(v).replace(/"/g, '""')}"`;
-  const rows = [['Strasse', 'Nr', 'Hinweis', 'Ausserhalb', 'EGAID'].map(q).join(';')];
+  const rows = [['Strasse', 'Nr', 'Ab', 'Zeit von', 'Zeit bis', 'Hinweis', 'Ausserhalb', 'EGAID'].map(q).join(';')];
   [...part.keys()].map(id => byId.get(id)).filter(Boolean).sort((x, y) => coll.compare(label(x), label(y)))
-    .forEach(a => rows.push([a.str, a.nr, part.get(a.id) || '', a.zone === 'rand' ? 'ja' : '', a.id].map(q).join(';')));
+    .forEach(a => { const e = part.get(a.id) || {}; rows.push([a.str, a.nr, e.ab_datum || '', (e.zeit_von || '').slice(0, 5), (e.zeit_bis || '').slice(0, 5), e.hinweis || '', a.zone === 'rand' ? 'ja' : '', a.id].map(q).join(';')); });
   const blob = new Blob(['﻿' + rows.join('\r\n')], {type: 'text/csv;charset=utf-8'});
   const url = URL.createObjectURL(blob), link = document.createElement('a');
   link.href = url; link.download = `wichtelweg-haeuser-${new Date().toISOString().slice(0, 10)}.csv`;
@@ -705,7 +748,7 @@ async function loadParticipants(quiet) {
   const st = document.getElementById('status');
   try {
     const rows = await db.list();
-    part.clear(); rows.forEach(r => part.set(Number(r.egaid), r.hinweis || ''));
+    part.clear(); rows.forEach(r => part.set(Number(r.egaid), {hinweis: r.hinweis || '', ab_datum: r.ab_datum || null, zeit_von: r.zeit_von || null, zeit_bis: r.zeit_bis || null}));
     loaded = true; st.className = 'status';
     st.textContent = DEMO ? 'Demo-Modus: Keine Datenbank verbunden. Änderungen bleiben in diesem Browser.' : '';
   } catch (e) {

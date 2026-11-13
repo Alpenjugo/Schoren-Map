@@ -73,6 +73,12 @@ Nach dem Anmelden erscheinen im Menü oben die Felder **Titel** (z. B. «Wichtel
 
 **Einmalig nötig** (auch erneut, falls du die Ergänzung schon für den Text allein ausgeführt hast): In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-einstellungen.sql` einfügen und **Run** klicken. Bis dahin zeigt die Karte den Text aus `public/config.js`, und Speichern im Menü meldet einen Hinweis.
 
+## Datum und Zeit pro Haus
+
+Wenn ein Haus aufgenommen ist, erscheinen im Popup zusätzlich die Felder **Ab** (Datum) sowie **Zeit von** und **bis**. Alle sind freiwillig. Besucher sehen nur, was ausgefüllt ist, z. B. «Ab Samstag, 5. Dezember, 17–20.30 Uhr». Leere Felder erscheinen nicht.
+
+**Einmalig nötig:** In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-datum-zeit.sql` einfügen und **Run** klicken. Bis dahin funktioniert die Karte wie bisher, und im Popup steht ein Hinweis statt der Datumsfelder.
+
 ## Schritt 4: In die Jimdo-Seite einbetten
 
 1. In Jimdo die gewünschte Seite öffnen (z. B. eine neue Unterseite «Wichtelweg» unter «Aktuell 2026»).
