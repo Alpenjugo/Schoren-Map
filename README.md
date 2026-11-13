@@ -105,4 +105,4 @@ Hinweise zur Einbettung:
 - **Kosten:** Supabase und Cloudflare Pages sind in den Gratis-Tarifen kostenlos. Ein Supabase-Gratisprojekt wird pausiert, wenn es längere Zeit (rund eine Woche) nicht genutzt wird. Vor dem nächsten Wichtelweg im Supabase-Dashboard wieder aktivieren.
 - **Was gespeichert wird:** Nur die Adress-Kennung (EGAID) der teilnehmenden Häuser und euer Hinweistext. Keine Namen und keine Besucherdaten. Der Standort im Knopf «Mein Standort» bleibt auf dem Handy der Besucher und wird nirgends übertragen.
 - **Sicherheit:** Lesen darf jede und jeder, ändern nur die angelegten Konten. Das regelt die Datenbank selbst, nicht nur die Karte.
-- **Datenstand:** Adressen und Strassen sind amtliche Daten von swisstopo, Stand 3. November 2026. Die Hausumrisse sind von 2022. Schorenstrasse 42 hat keinen Umriss und erscheint deshalb als Punkt.
+- **Datenstand:** Adressen und Strassen sind amtliche Daten von swisstopo, Stand 3. November 2026. Die Hausumrisse sind von 2022 (swissBUILDINGS3D). Schorenstrasse 42 fehlt dort und ist aus dem Plan der amtlichen Vermessung nachgezeichnet (Genauigkeit etwa ±1 m).
