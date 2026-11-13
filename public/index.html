@@ -807,7 +807,10 @@ path.bld.on{filter:drop-shadow(0 0 5px rgba(180,83,42,.55)) drop-shadow(0 2px 8p
 .pp-edit label{display:flex;flex-direction:column;gap:2px;font-size:12px;font-weight:650;color:var(--muted)}
 .pp-edit input{width:100%;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:14px;font-weight:400;color:var(--ink);background:#fff;min-width:0}
 .pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.pp-grid .ab{grid-column:1 / -1}
+.pp-dr{display:flex;gap:6px}
+.pp-dr select{border:1px solid var(--line);border-radius:8px;padding:6px 6px;font-size:14px;font-weight:600;color:var(--ink);background:#fff;flex:none}
+.pp-dr input{flex:1}
+.pp-ab{align-self:center;font-size:14px;font-weight:600;color:var(--ink);padding:0 4px}
 .pp-note{color:var(--muted);font-size:12px}
 .pp-when{color:var(--brown);font-weight:650;margin-top:2px}
 .pp-edit small{color:var(--muted);font-size:12px}
@@ -3761,8 +3764,13 @@ const db = {
   async list() {
     if (DEMO) return store.get(DEMO_KEY) || [];
     const get = cols => fetch(`${API}/rest/v1/teilnehmer?select=${cols}`, {headers: this.headers(false), cache: 'no-store'});
-    let r = await get('egaid,hinweis,ab_datum,zeit_von,zeit_bis');
-    if ([400, 401, 403].includes(r.status)) { r = await get('egaid,hinweis'); this.hasZeit = false; } else this.hasZeit = true;
+    const stufen = ['egaid,hinweis,ab_datum,nur_am,zeit_von,zeit_bis', 'egaid,hinweis,ab_datum,zeit_von,zeit_bis', 'egaid,hinweis'];
+    let r;
+    for (let i = 0; i < stufen.length; i++) {
+      r = await get(stufen[i]); this.stufe = 2 - i;
+      if (![400, 401, 403].includes(r.status)) break;
+    }
+    this.hasZeit = this.stufe >= 1; this.hasNurAm = this.stufe >= 2;
     if (!r.ok) throw new Error('Laden fehlgeschlagen (' + r.status + ')');
     return r.json();
   },
@@ -3792,7 +3800,7 @@ const db = {
     if (r.status === 401) { this.logout(); throw new Error('Anmeldung abgelaufen. Melde dich neu an.'); }
     if (!r.ok) { const e = new Error('Änderung nicht gespeichert. Versuche es noch einmal.'); e.status = r.status; throw e; }
   },
-  hasZeit: true,
+  hasZeit: true, hasNurAm: true, stufe: 2,
   async upsert(egaid, fields) {
     if (DEMO) { const l = store.get(DEMO_KEY) || []; const old = l.find(x => x.egaid === egaid) || {}; store.set(DEMO_KEY, [...l.filter(x => x.egaid !== egaid), {...old, egaid, ...fields}]); return; }
     await this.write('POST', 'teilnehmer?on_conflict=egaid', [{egaid, ...fields}]);
@@ -3967,9 +3975,12 @@ function popupHtml() {
       + `<button class="toggle${on ? ' on' : ''}" data-toggle="${a.id}">${on ? 'Entfernen' : 'Hinzufügen'}</button></div>`
       + (on ? `<div class="pp-edit">`
         + `<label>Hinweis<input type="text" maxlength="200" placeholder="Fenster links" data-f="hinweis" data-id="${a.id}" value="${esc(e.hinweis || '')}"></label>`
-        + (db.hasZeit ? `<div class="pp-grid"><label class="ab">Ab<input type="date" data-f="ab_datum" data-id="${a.id}" value="${esc(e.ab_datum || '')}"></label>`
-          + `<label>Zeit von<input type="time" step="900" data-f="zeit_von" data-id="${a.id}" value="${esc((e.zeit_von || '').slice(0, 5))}"></label>`
-          + `<label>bis<input type="time" step="900" data-f="zeit_bis" data-id="${a.id}" value="${esc((e.zeit_bis || '').slice(0, 5))}"></label></div>`
+        + (db.hasZeit ? `<div class="pp-date"><label>Datum<span class="pp-dr">`
+            + (db.hasNurAm ? `<select data-f="nur_am" data-id="${a.id}" aria-label="Art des Datums"><option value="0"${e.nur_am ? '' : ' selected'}>Ab</option><option value="1"${e.nur_am ? ' selected' : ''}>Nur am</option></select>` : '<span class="pp-ab">Ab</span>')
+            + `<input type="text" inputmode="numeric" autocomplete="off" placeholder="05.12.26" data-f="ab_datum" data-id="${a.id}" value="${esc(datumKurz(e.ab_datum))}"></span></label></div>`
+          + `<div class="pp-grid"><label>Zeit von<input type="text" inputmode="decimal" autocomplete="off" placeholder="17.00" data-f="zeit_von" data-id="${a.id}" value="${esc(zeitKurz(e.zeit_von))}"></label>`
+          + `<label>bis<input type="text" inputmode="decimal" autocomplete="off" placeholder="20.30" data-f="zeit_bis" data-id="${a.id}" value="${esc(zeitKurz(e.zeit_bis))}"></label></div>`
+          + (db.hasNurAm ? '' : `<small class="pp-note">Für «Nur am» die Ergänzung «Datum und Zeit» in Supabase erneut ausführen.</small>`)
           : `<small class="pp-note">Für Datum und Zeit fehlt in Supabase noch eine Ergänzung (siehe Anleitung).</small>`)
         + `<small data-saved="${a.id}"></small></div>` : '')
       + `</div>`;
@@ -3991,13 +4002,20 @@ document.getElementById('map').addEventListener('change', async e => {
   const inp = e.target.closest('[data-f]'); if (!inp || !isAdmin()) return;
   const id = Number(inp.dataset.id), f = inp.dataset.f, info = document.querySelector(`[data-saved="${id}"]`);
   const cur = part.get(id) || {};
-  let val = f === 'hinweis' ? inp.value.trim().slice(0, 200) : (inp.value || null);
-  if (f === 'zeit_von' || f === 'zeit_bis') {
+  const zurueck = () => { inp.value = f === 'ab_datum' ? datumKurz(cur.ab_datum) : zeitKurz(cur[f]); };
+  let val;
+  if (f === 'hinweis') val = inp.value.trim().slice(0, 200);
+  else if (f === 'nur_am') val = inp.value === '1';
+  else if (f === 'ab_datum') {
+    val = parseDatum(inp.value);
+    if (val === undefined) { toast('Datum im Format TT.MM.JJ eingeben, z. B. 05.12.26.', true); zurueck(); return; }
+    inp.value = datumKurz(val);
+  } else {
+    val = parseZeit(inp.value);
+    if (val === undefined) { toast('Zeit im Format HH.MM eingeben, z. B. 17.30.', true); zurueck(); return; }
     const von = f === 'zeit_von' ? val : cur.zeit_von, bis = f === 'zeit_bis' ? val : cur.zeit_bis;
-    if (von && bis && bis.slice(0, 5) <= von.slice(0, 5)) {
-      toast('Die Endzeit muss nach der Startzeit liegen.', true);
-      inp.value = (cur[f] || '').slice(0, 5); return;
-    }
+    if (von && bis && bis.slice(0, 5) <= von.slice(0, 5)) { toast('Die Endzeit muss nach der Startzeit liegen.', true); zurueck(); return; }
+    inp.value = zeitKurz(val);
   }
   try { await db.upsert(id, {[f]: val}); part.set(id, {...cur, [f]: val}); if (info) info.textContent = 'Gespeichert'; renderList(); }
   catch (err) { toast(err.message, true); if (!isAdmin()) renderAdmin(); }
@@ -4005,17 +4023,38 @@ document.getElementById('map').addEventListener('change', async e => {
 document.getElementById('map').addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches('[data-f]')) e.target.blur(); });
 
 /* Datum und Zeit für Besucher */
-const fmtDatum = d => new Intl.DateTimeFormat('de-CH', {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'}).format(new Date(d + 'T00:00:00Z'));
-const fmtZeit = z => { const [h, m] = z.slice(0, 5).split(':'); return m === '00' ? String(Number(h)) : `${Number(h)}.${m}`; };
+// Schweizer Schreibweise: Datum 05.12.26, Zeit 17.30
+const datumKurz = d => d ? `${d.slice(8, 10)}.${d.slice(5, 7)}.${d.slice(2, 4)}` : '';
+const datumLang = d => d ? `${d.slice(8, 10)}.${d.slice(5, 7)}.${d.slice(0, 4)}` : '';
+const zeitKurz = z => z ? `${z.slice(0, 2)}.${z.slice(3, 5)}` : '';
+function parseDatum(s) {           // liefert 'JJJJ-MM-TT', null (leer) oder undefined (ungültig)
+  s = s.trim(); if (!s) return null;
+  const m = s.match(/^(\d{1,2})[.\/-](\d{1,2})(?:[.\/-](\d{2}|\d{4})?)?\.?$/); if (!m) return undefined;
+  const d = +m[1], mo = +m[2], heute = new Date();
+  let y = m[3] ? (m[3].length === 2 ? 2000 + +m[3] : +m[3]) : heute.getFullYear();
+  const dt = new Date(Date.UTC(y, mo - 1, d));
+  if (dt.getUTCMonth() !== mo - 1 || dt.getUTCDate() !== d) return undefined;
+  if (!m[3] && dt < Date.UTC(heute.getFullYear(), heute.getMonth(), heute.getDate() - 60)) dt.setUTCFullYear(y + 1);
+  return dt.toISOString().slice(0, 10);
+}
+function parseZeit(s) {            // liefert 'HH:MM', null oder undefined
+  s = s.trim().replace(/\s*uhr$/i, ''); if (!s) return null;
+  const m = s.match(/^(\d{1,2})(?:[.:,h]?(\d{2}))?$/); if (!m) return undefined;
+  const h = +m[1], mi = m[2] ? +m[2] : 0;
+  if (h > 23 || mi > 59) return undefined;
+  return `${String(h).padStart(2, '0')}:${String(mi).padStart(2, '0')}`;
+}
 function whenText(e) {
   if (!e) return '';
   const parts = [];
-  if (e.ab_datum) parts.push('Ab ' + fmtDatum(e.ab_datum));
+  if (e.ab_datum) parts.push((e.nur_am ? 'Nur am ' : 'Ab ') + datumKurz(e.ab_datum));
   const v = e.zeit_von, b = e.zeit_bis;
-  if (v && b) parts.push(`${fmtZeit(v)}–${fmtZeit(b)} Uhr`);
-  else if (v) parts.push(`ab ${fmtZeit(v)} Uhr`);
-  else if (b) parts.push(`bis ${fmtZeit(b)} Uhr`);
-  return parts.join(', ');
+  if (v && b) parts.push(`${zeitKurz(v)}–${zeitKurz(b)} Uhr`);
+  const jeweils = e.ab_datum && !e.nur_am ? 'jeweils ' : '';   // vermeidet «Ab 01.12.26, ab 18.30 Uhr»
+  if (!(v && b) && v) parts.push(`${jeweils}ab ${zeitKurz(v)} Uhr`);
+  else if (!(v && b) && b) parts.push(`${jeweils}bis ${zeitKurz(b)} Uhr`);
+  const s = parts.join(', ');
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 /* Darstellung */
@@ -4202,9 +4241,9 @@ function renderAdmin() {
 /* CSV für die Verwaltung */
 document.getElementById('btn-csv').onclick = () => {
   const q = v => `"${String(v).replace(/"/g, '""')}"`;
-  const rows = [['Strasse', 'Nr', 'Ab', 'Zeit von', 'Zeit bis', 'Hinweis', 'Ausserhalb', 'EGAID'].map(q).join(';')];
+  const rows = [['Strasse', 'Nr', 'Art', 'Datum', 'Zeit von', 'Zeit bis', 'Hinweis', 'Ausserhalb', 'EGAID'].map(q).join(';')];
   [...part.keys()].map(id => byId.get(id)).filter(Boolean).sort((x, y) => coll.compare(label(x), label(y)))
-    .forEach(a => { const e = part.get(a.id) || {}; rows.push([a.str, a.nr, e.ab_datum || '', (e.zeit_von || '').slice(0, 5), (e.zeit_bis || '').slice(0, 5), e.hinweis || '', a.zone === 'rand' ? 'ja' : '', a.id].map(q).join(';')); });
+    .forEach(a => { const e = part.get(a.id) || {}; rows.push([a.str, a.nr, e.ab_datum ? (e.nur_am ? 'nur am' : 'ab') : '', datumLang(e.ab_datum), (e.zeit_von || '').slice(0, 5), (e.zeit_bis || '').slice(0, 5), e.hinweis || '', a.zone === 'rand' ? 'ja' : '', a.id].map(q).join(';')); });
   const blob = new Blob(['﻿' + rows.join('\r\n')], {type: 'text/csv;charset=utf-8'});
   const url = URL.createObjectURL(blob), link = document.createElement('a');
   link.href = url; link.download = `wichtelweg-haeuser-${new Date().toISOString().slice(0, 10)}.csv`;
@@ -4234,7 +4273,7 @@ async function loadParticipants(quiet) {
   const st = document.getElementById('status');
   try {
     const rows = await db.list();
-    part.clear(); rows.forEach(r => part.set(Number(r.egaid), {hinweis: r.hinweis || '', ab_datum: r.ab_datum || null, zeit_von: r.zeit_von || null, zeit_bis: r.zeit_bis || null}));
+    part.clear(); rows.forEach(r => part.set(Number(r.egaid), {hinweis: r.hinweis || '', ab_datum: r.ab_datum || null, nur_am: !!r.nur_am, zeit_von: r.zeit_von || null, zeit_bis: r.zeit_bis || null}));
     loaded = true; st.className = 'status';
     st.textContent = DEMO ? 'Demo-Modus: Keine Datenbank verbunden. Änderungen bleiben in diesem Browser.' : '';
   } catch (e) {

@@ -75,9 +75,14 @@ Nach dem Anmelden erscheinen im Menü oben die Felder **Titel** (z. B. «Wichtel
 
 ## Datum und Zeit pro Haus
 
-Wenn ein Haus aufgenommen ist, erscheinen im Popup zusätzlich die Felder **Ab** (Datum) sowie **Zeit von** und **bis**. Alle sind freiwillig. Besucher sehen nur, was ausgefüllt ist, z. B. «Ab Samstag, 5. Dezember, 17–20.30 Uhr». Leere Felder erscheinen nicht.
+Wenn ein Haus aufgenommen ist, erscheinen im Popup zusätzlich:
 
-**Einmalig nötig:** In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-datum-zeit.sql` einfügen und **Run** klicken. Bis dahin funktioniert die Karte wie bisher, und im Popup steht ein Hinweis statt der Datumsfelder.
+- **Datum** mit Auswahl **Ab** oder **Nur am**, Eingabe als TT.MM.JJ (z. B. `05.12.26`; `5.12.` geht auch)
+- **Zeit von** und **bis**, Eingabe als HH.MM (z. B. `17.30`; `17` geht auch)
+
+Alle Felder sind freiwillig. Besucher sehen nur, was ausgefüllt ist, z. B. «Nur am 05.12.26, 17.00–20.30 Uhr» oder «Ab 01.12.26, jeweils ab 18.30 Uhr».
+
+**Einmalig nötig:** In Supabase unter **SQL Editor → New query** den Inhalt von `supabase/ergaenzung-datum-zeit.sql` einfügen und **Run** klicken. Falls du eine frühere Fassung schon ausgeführt hast, einfach nochmals ausführen: Bestehende Einträge bleiben erhalten, neu kommt die Auswahl «Nur am» dazu.
 
 ## Schritt 4: In die Jimdo-Seite einbetten
 

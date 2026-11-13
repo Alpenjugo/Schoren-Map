@@ -51,13 +51,14 @@ create trigger teilnehmer_geaendert
 alter table public.teilnehmer add column if not exists ab_datum date;
 alter table public.teilnehmer add column if not exists zeit_von time;
 alter table public.teilnehmer add column if not exists zeit_bis time;
+alter table public.teilnehmer add column if not exists nur_am boolean not null default false;  -- true = nur an diesem Datum, false = ab diesem Datum
 
 alter table public.teilnehmer drop constraint if exists teilnehmer_zeit_reihenfolge;
 alter table public.teilnehmer add constraint teilnehmer_zeit_reihenfolge
   check (zeit_von is null or zeit_bis is null or zeit_bis > zeit_von);
 
 -- Besucher dürfen die neuen Felder lesen (Schreiben bleibt den angemeldeten Konten vorbehalten)
-grant select (ab_datum, zeit_von, zeit_bis) on table public.teilnehmer to anon;
+grant select (ab_datum, nur_am, zeit_von, zeit_bis) on table public.teilnehmer to anon;
 
 -- 6) Einstellungen (Text unter dem Titel)
 create table if not exists public.einstellungen (
